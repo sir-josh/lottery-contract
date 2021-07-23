@@ -1,0 +1,17 @@
+{
+  "name": "inboxcontract",
+  "version": "1.0.0",
+  "description": "Experimental smart contract",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Aniekwe Joshua",
+  "license": "ISC",
+  "dependencies": {
+    "ganache-cli": "^6.12.2",
+    "mocha": "^9.0.2",
+    "solc": "^0.4.17",
+    "web3": "^1.3.5"
+  }
+}
