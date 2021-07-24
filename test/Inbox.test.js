@@ -7,6 +7,7 @@ const { interface, bytecode } =  require('../compile');
 let FetchedAccounts;
 let inbox;
 const INITIAL_STRING = "Hi, This is my first smart contract";
+const newMessage = "Good for you, welcome to smart contract programming";
 
 beforeEach(async() => {
     //Get a list of my accounts associated with ganache network
@@ -27,5 +28,11 @@ describe("Inbox Contract Body", () => {
     it('has a default message', async () =>{
         const msg = await inbox.methods.message().call();
         assert.equal(msg, INITIAL_STRING);
+    });
+
+    it('changed the default message', async () => {
+        await inbox.methods.setMessage("Good for you, welcome to smart contract programming").send({ from: FetchedAccounts[0]});
+        const msg = await inbox.methods.message().call();
+        assert.equal(msg, newMessage);
     });
 });
