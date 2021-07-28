@@ -1,4 +1,5 @@
-pragma solidity ^0.4.17;
+pragma solidity ^0.4.17;  // solhint-disable-line
+
 
 contract Inbox{
     string public message;
