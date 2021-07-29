@@ -1,7 +1,7 @@
 {
-  "name": "inboxcontract",
+  "name": "lotterycontract",
   "version": "1.0.0",
-  "description": "Experimental smart contract",
+  "description": "Experimental lottery smart contract",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
